@@ -1,0 +1,5 @@
+{
+  "name": "ZingleAI - Serverless Agent Runtime",
+  "description": "The Agentic Compute Runtime for durable serverless platforms.",
+  "requestFramePermissions": []
+}

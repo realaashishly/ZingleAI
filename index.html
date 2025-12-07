@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZingleAI - Agentic Data Engineers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#020202', // Ultra dark
+              surface: '#0A0A0A',
+              border: '#1F1F1F',
+              accent: '#4ADE80', // Green accent from screenshots
+              'accent-dim': 'rgba(74, 222, 128, 0.1)',
+              secondary: '#888888',
+              primary: '#EDEDED',
+              'chart-purple': '#8B5CF6',
+              'chart-blue': '#3B82F6',
+              'chart-orange': '#F97316',
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              serif: ['Instrument Serif', 'serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            backgroundImage: {
+              'grid-pattern': "radial-gradient(#1f1f1f 1px, transparent 1px)",
+              'scanline': "linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2))",
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bar-fill': 'fillBar 1.5s ease-out forwards',
+              'radar-spin': 'radarSpin 4s linear infinite',
+              'shimmer': 'shimmer 2s linear infinite',
+              'matrix-scroll': 'matrixScroll 20s linear infinite',
+            },
+            keyframes: {
+              fillBar: {
+                '0%': { height: '0%' },
+                '100%': { height: 'var(--target-height)' },
+              },
+              radarSpin: {
+                '0%': { transform: 'rotate(0deg)' },
+                '100%': { transform: 'rotate(360deg)' },
+              },
+              shimmer: {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(100%)' },
+              },
+              matrixScroll: {
+                '0%': { transform: 'translateY(0)' },
+                '100%': { transform: 'translateY(-50%)' },
+              },
+              moveDown: {
+                '0%': { top: '-50%' },
+                '100%': { top: '150%' },
+              },
+              moveRight: {
+                '0%': { left: '-20%' },
+                '100%': { left: '120%' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      body { 
+        font-family: 'Inter', sans-serif; 
+        background-color: #020202;
+        color: #EDEDED;
+      }
+      .font-mono { font-family: 'JetBrains Mono', monospace; }
+      .font-serif { font-family: 'Instrument Serif', serif; }
+      
+      /* Smooth scrolling */
+      html { scroll-behavior: smooth; }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #020202; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333; 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #4ade80; 
+      }
+      
+      .grid-bg {
+        background-size: 24px 24px;
+        background-image: radial-gradient(#222 1px, transparent 1px);
+        mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+      }
+
+      .pixel-noise {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+      }
+
+      .text-glow {
+        text-shadow: 0 0 15px rgba(74, 222, 128, 0.4);
+      }
+      
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      .cursor-blink {
+        animation: blink 1s step-end infinite;
+      }
+
+      .scanline-overlay {
+        background: linear-gradient(
+          to bottom,
+          rgba(255,255,255,0),
+          rgba(255,255,255,0) 50%,
+          rgba(0,0,0,0.1) 50%,
+          rgba(0,0,0,0.1)
+        );
+        background-size: 100% 4px;
+        pointer-events: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
